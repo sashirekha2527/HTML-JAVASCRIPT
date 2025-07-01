@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"content="width=device-width;initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <p id="greetings">HI there!</p>
+        <h2 class="he">Sashi</h2>
+        <p class="he">Hello</p>
+        <input type="text" id="nameInput" placeholder="Enter your name">
+        <button onclick="f()">Greet</button>
+        <script>
+            document.title="Hello World!";
+            function f(){
+                const name=document.getElementById("nameInput").value;
+                document.getElementsByClassName("he")[0].innerHTML=`Hello, ${name}!`;
+                document.getElementById("greetings").innerText=`Hello, ${name}!`;
+                document.getElementsByTagName("p")[1].innerText=`Hello, ${name}!`;
+
+                const newHeading=document.createElement("h3");
+                newHeading.innerText=`Hello, ${name}!`;
+                document.body.appendChild(newHeading);
+
+                
+            }
+        </script>
+    </body>
+</html>

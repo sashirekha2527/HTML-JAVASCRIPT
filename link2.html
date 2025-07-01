@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"content="width=device-width;initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .container1{
+                background-color: lightblue;
+                padding:20px;
+                margin:10px;
+            }
+            .container2{
+                background-color:lightpink;
+                padding:20px;
+                margin:10px;
+            }
+            .container3{
+                background-color:lightgreen;
+                padding:20px;
+                margin:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container1">
+            <h1>heading 1</h1>
+            <p>paragraph 1</p>
+        </div>
+        <button onclick="f()">Click me</button>
+        <div class="container2">
+            <h1>heading 2</h1>
+            <p>paragraph 2</p>
+        </div>
+        <button onclick="f()">Click me</button>
+        <script>
+            function f(){
+            const c=document.querySelectorAll('.container2');
+            c.forEach(element =>{
+                element.setAttribute('class','container3');
+            });
+        }
+        </script>
+    </body>
+</html>

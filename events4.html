@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"content="width=device-width;initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            #div{
+                background-color: lightblue;
+                display:flex;
+                border:2px solid blue;
+                width: 200px;
+                height:200px;
+                align-items: center;
+                justify-content: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="div">
+        </div>
+        <script>
+            let a=document.getElementById("div");
+            a.addEventListener("mouseover",function(){
+                a.innerHTML="<h1>Mouse over the div!</h1>";
+                a.style.color="crimson";
+                a.style.border="2px solid crimson";
+                a.style.borderRadius="55px";
+            });
+            a.addEventListener("mouseout",function(){
+                a.innerHTML="<h1>Mouse out of the div!</h1>";
+                a.style.backgroundColor="pink";
+            })
+            //syntax of event listener
+            //element.addEventListener(event,function,useCapture);
+        </script>
+    </body>
+</html>
