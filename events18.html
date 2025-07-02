@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            background-color:pink;
+            color:black;
+            width:100px;
+            height:100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+
+    </div>
+    Hello World!
+    <p id="output"></p>
+    <script>
+        document.body.addEventListener("keydown",f);
+        document.body.addEventListener("keydown",g);
+        function f(){
+        document.body.style.backgroundColor="blue";
+        }
+        function g(){
+            alert("Hello,World");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Color Changer</title>
+</head>
+<body>
+  <div id="container">
+    <input type="text" id="colorInput" placeholder="Enter a color name">
+    <button onclick="g()">Change Background</button>
+  </div>
+
+  <script>
+    // Handle color change from text input
+    function g() {
+      const Color = document.getElementById("color").value;
+      document.body.style.backgroundColor = Color;
+    }
+
+    // Handle key-based color changes
+    document.body.addEventListener("keydown", function(event) {
+      let c = { "w": "white", "g": "green", "b": "blue", "r": "red" };
+      let key = event.key.toLowerCase();
+      if (c[key]) {
+        document.body.style.backgroundColor = c[key];
+      } else if (["w", "g", "b", "r"].indexOf(key) === -1 && event.key.length === 1) {
+        alert("Invalid key! Use 'w', 'b', 'g', or 'r'.....");
+      }
+    });
+  </script>
+</body>
+</html>
